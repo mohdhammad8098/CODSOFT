@@ -1,0 +1,53 @@
+#        ROCK, PAPER AND SCISSOR GAME    
+import random
+
+def gamewin(comp, you):
+    
+    if comp== you:
+       return None
+    elif comp== 'p':
+        if you== 'r':
+           return False
+        elif you== 's':
+            return True
+    elif comp== 'r':
+        if you== 's':
+             return False
+        elif you == 'p':
+            return True
+    elif comp== 's':
+        if you== 'p':
+            return False
+        elif you== 'r':
+            return True
+print("comp turns: choose one Rock(r) Paper(p) or Scissor(s): ")
+randno= random.randint(1, 3)
+if randno== 1:
+    comp= 'p'
+elif randno== 2:
+    comp= 'r'
+elif randno== 3:
+    comp= 's'
+you= input("you's turn: choose one Rock(r) Paper(p) or Scissor(s): ")
+a= gamewin(comp, you)
+print(f"Comp choose {comp}")
+print(f"You choose {you}")
+if a== None:
+    print("The game is tie!")
+elif a:
+    print("congratulations! You won")
+else:
+    print("Sorry! You loose")
+
+    
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
